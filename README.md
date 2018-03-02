@@ -1,11 +1,16 @@
 Argv Config File
 ----------------
 
-Pass a JavaScript configuration file on the command line to a Node.js application. The module [config-extend](https://www.npmjs.com/package/config-extend) is used to merge with the default configuration.
+Pass a JavaScript configuration file on the command line to a Node.js application. Configuration merging is done using [config-extend](https://www.npmjs.com/package/config-extend).
+
+````bash
+npm install --save argv-config-file
+````
+
 
 ````javascript
 // app.js
-const argvConfigFile = require('argv-config-file');
+const argvConfigFile = require('');
 
 let config = argvConfigFile({
 	// Default config
