@@ -1,15 +1,21 @@
 Argv Config File
-----------------
+================
 
 Pass a JavaScript configuration file on the command line to a Node.js application. Configuration merging is done using [config-extend](https://www.npmjs.com/package/config-extend).
+
+### Install
 
 ````bash
 npm install --save argv-config-file
 ````
 
 
+Usage
+-------
+
+### app.js
+
 ````javascript
-// app.js
 const argvConfigFile = require('');
 
 let config = argvConfigFile({
@@ -20,8 +26,10 @@ let config = argvConfigFile({
 });
 ````
 
+
+### my-config.js
+
 ````javascript
-// my-config.js
 module.exports = {
 	// Custom config
 	foo: ['array', 'override']
@@ -29,6 +37,18 @@ module.exports = {
 ````
 
 
+### Run
+
 ````bash
 node app.js -c /some/directory/my-config.js
+````
+
+
+### Config Value
+
+````
+{
+	foo: ['array', 'override'],
+	biz: 'baz'
+}
 ````
