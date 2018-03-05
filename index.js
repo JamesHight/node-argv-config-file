@@ -10,12 +10,12 @@ function argvConfig(defaultConfig) {
 
 	if (configFile) {
 		let file = path.resolve(configFile);
-
+		console.log('file: ', file);
 		try {
 			config =  configExtend(config, require(file));
 		}
-		catch(e) {
-			throw new Error('Could not load configuration file: ' + file);
+		catch(err) {
+			throw new Error('Could not load configuration file ' + file + ': ' + err.message);
 		}
 	}
 
