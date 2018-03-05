@@ -6,19 +6,17 @@ const configExtend = require('config-extend');
 function argvConfig(defaultConfig) {
 	let argv = minimist(process.argv);
 	let config = configExtend({}, defaultConfig);
+	let configFile = argv.c || argv.config;
 
-	if (argv.c) {
-		let file = path.resolve(argv.c);
-		let configFile;
+	if (configFile) {
+		let file = path.resolve(configFile);
 
 		try {
-			configFile = require(file);
+			config =  configExtend(config, require(file));
 		}
 		catch(e) {
-			throw new Error('Could not load configuration file at location: ' + file);
+			throw new Error('Could not load configuration file: ' + file);
 		}
-
-		config = configExtend(config, configFile);
 	}
 
 	return config;

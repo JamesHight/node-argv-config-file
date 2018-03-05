@@ -37,10 +37,19 @@ module.exports = {
 ````
 
 
+### my-config.json
+
+````json
+{
+	"foo": ["array", "override"]
+}
+````
+
 ### Run
 
 ````bash
 node app.js -c /some/directory/my-config.js
+node app.js --config=/some/directory/my-config.json
 ````
 
 

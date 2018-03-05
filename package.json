@@ -2,6 +2,13 @@
   "name": "argv-config-file",
   "version": "0.0.2",
   "description": "Pass a js configuration file on the command line.",
+  "keywords": [
+    "config",
+    "configuration",
+    "argv",
+    "file",
+    "extend"
+  ],
   "main": "index.js",
   "scripts": {
     "test": "./node_modules/mocha/bin/mocha test"
