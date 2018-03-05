@@ -10,7 +10,7 @@ function argvConfig(defaultConfig) {
 
 	if (configFile) {
 		let file = path.resolve(configFile);
-		console.log('file: ', file);
+
 		try {
 			config =  configExtend(config, require(file));
 		}
