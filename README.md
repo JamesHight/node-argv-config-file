@@ -16,7 +16,7 @@ Usage
 ### app.js
 
 ````javascript
-const argvConfigFile = require('');
+const argvConfigFile = require('argv-config-file');
 
 let config = argvConfigFile({
 	// Default config
